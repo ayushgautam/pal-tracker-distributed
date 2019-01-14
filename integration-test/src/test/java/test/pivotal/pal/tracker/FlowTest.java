@@ -107,6 +107,8 @@ public class FlowTest {
 
 
         response = httpClient.get(allocationsServerUrl("/"));
+        System.out.println("TEST:"+allocationsServerUrl("/"));
+        System.out.println("TEST:"+response);
         assertThat(response.body).isEqualTo("Noop!");
 
         response = httpClient.post(
